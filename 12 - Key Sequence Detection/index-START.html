@@ -7,6 +7,17 @@
 </head>
 <body>
 <script>
+  const keyUp = [];
+  const secretWord = "timmy!"
+
+  window.addEventListener('keyup', (e) => {
+    keyUp.push(e.key);
+    keyUp.splice(-secretWord.length - 1, keyUp.length -secretWord.length );
+    if(keyUp.join('') === secretWord) {
+      cornify_add();
+    }
+  });
+
 </script>
 </body>
 </html>
